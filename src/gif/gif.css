@@ -1,11 +1,12 @@
 #gif {
-	background-image: url('/img/cat1.png');
+	background-image: url('/img/cat1.webp');
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 200px;
 	height: 200px;
     margin: auto;
 	animation: giffy 0.3s infinite steps(1);
+	animation-delay: 0s;
     border-radius: 100px;
 }
 
@@ -18,15 +19,15 @@
 }
 
 @keyframes giffy {
-	0%   { background-image: url('/img/cat1.png'); } 
-	12%   { background-image: url('/img/cat2.png'); } 
-	24%   { background-image: url('/img/cat3.png'); } 
-	36%   { background-image: url('/img/cat4.png'); } 
-	48%   { background-image: url('/img/cat5.png'); } 
-	60%   { background-image: url('/img/cat6.png'); } 
-	72%   { background-image: url('/img/cat7.png'); } 
-	84%   { background-image: url('/img/cat8.png'); } 
-	94%   { background-image: url('/img/cat9.png'); } 
+	0%   { background-image: url('/img/cat1.webp'); } 
+	12%   { background-image: url('/img/cat2.webp'); } 
+	24%   { background-image: url('/img/cat3.webp'); } 
+	36%   { background-image: url('/img/cat4.webp'); } 
+	48%   { background-image: url('/img/cat5.webp'); } 
+	60%   { background-image: url('/img/cat6.webp'); } 
+	72%   { background-image: url('/img/cat7.webp'); } 
+	84%   { background-image: url('/img/cat8.webp'); } 
+	94%   { background-image: url('/img/cat9.webp'); } 
 }
 
 button{
@@ -39,6 +40,11 @@ button{
     margin-right: 5px;
 	border-radius: 100px;
 }
+
+body::after{
+	position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+	content:url('/img/cat1.webp') url('/img/cat2.webp') url('/img/cat3.webp') url('/img/cat4.webp') url('/img/cat5.webp') url('/img/cat6.webp') url('/img/cat7.webp') url('/img/cat8.webp') url('/img/cat9.webp');
+ }
 
 #title{
     margin: 10px;
