@@ -1,0 +1,46 @@
+#gif {
+	background-image: url('/img/cat1.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 200px;
+    margin: auto;
+	animation: giffy 0.3s infinite steps(1);
+    border-radius: 100px;
+}
+
+.playing {
+	animation-play-state:running !important;
+}
+
+.paused {
+	animation-play-state:paused !important;
+}
+
+@keyframes giffy {
+	0%   { background-image: url('/img/cat1.png'); } 
+	12%   { background-image: url('/img/cat2.png'); } 
+	24%   { background-image: url('/img/cat3.png'); } 
+	36%   { background-image: url('/img/cat4.png'); } 
+	48%   { background-image: url('/img/cat5.png'); } 
+	60%   { background-image: url('/img/cat6.png'); } 
+	72%   { background-image: url('/img/cat7.png'); } 
+	84%   { background-image: url('/img/cat8.png'); } 
+	94%   { background-image: url('/img/cat9.png'); } 
+}
+
+button{
+	width: 50px;
+	border: 0px;
+	height: 30px;
+    margin-top: 10px;
+	margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+	border-radius: 100px;
+}
+
+#title{
+    margin: 10px;
+	visibility: hidden;
+}
