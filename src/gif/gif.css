@@ -31,7 +31,6 @@
 }
 
 button{
-	width: 50px;
 	border: 0px;
 	height: 30px;
     margin-top: 10px;
@@ -39,6 +38,8 @@ button{
     margin-left: 5px;
     margin-right: 5px;
 	border-radius: 100px;
+	padding: 10px;
+	font-size: 10px;
 }
 
 body::after{
