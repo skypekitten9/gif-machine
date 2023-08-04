@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gif-machine/static/css/main.ec9ad19b.css",
-    "main.js": "/gif-machine/static/js/main.143232a0.js",
+    "main.js": "/gif-machine/static/js/main.120417e4.js",
     "static/js/787.e408a21a.chunk.js": "/gif-machine/static/js/787.e408a21a.chunk.js",
     "static/media/cat5.webp": "/gif-machine/static/media/cat5.f988b29e5b7758f58ced.webp",
     "static/media/cat4.webp": "/gif-machine/static/media/cat4.b046c7fb5ae288fb7c19.webp",
@@ -14,11 +14,11 @@
     "static/media/cat9.webp": "/gif-machine/static/media/cat9.91dfa03d226a4bb3fdbb.webp",
     "index.html": "/gif-machine/index.html",
     "main.ec9ad19b.css.map": "/gif-machine/static/css/main.ec9ad19b.css.map",
-    "main.143232a0.js.map": "/gif-machine/static/js/main.143232a0.js.map",
+    "main.120417e4.js.map": "/gif-machine/static/js/main.120417e4.js.map",
     "787.e408a21a.chunk.js.map": "/gif-machine/static/js/787.e408a21a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec9ad19b.css",
-    "static/js/main.143232a0.js"
+    "static/js/main.120417e4.js"
   ]
 }
