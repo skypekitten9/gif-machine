@@ -7,11 +7,19 @@ import {
   PAUSED_CLASS,
   PLAYING_CLASS,
 } from "./component/gif.component";
+import { useMachine } from "@xstate/react";
+import { gifMachine } from "./machine/gifMachine";
+import { stat } from "fs";
 
 const PLAYING_TITLE = "slurp, slurp";
 const PAUSED_TITLE = "go ahead, take a sip";
+type SendType = ReturnType<typeof useMachine>[1];
 
-function Pause(setTitleState: React.Dispatch<React.SetStateAction<string>>) {
+function Pause(
+  setTitleState: React.Dispatch<React.SetStateAction<string>>,
+  send: SendType,
+) {
+  send("PAUSE");
   const gifElement = document.getElementById(GIF_ID);
   if (gifElement) {
     gifElement.classList.remove(PLAYING_CLASS);
@@ -22,7 +30,11 @@ function Pause(setTitleState: React.Dispatch<React.SetStateAction<string>>) {
   }
 }
 
-function Play(setTitleState: React.Dispatch<React.SetStateAction<string>>) {
+function Play(
+  setTitleState: React.Dispatch<React.SetStateAction<string>>,
+  send: SendType,
+) {
+  send("PLAY");
   const gifElement = document.getElementById(GIF_ID);
   if (gifElement) {
     gifElement.classList.remove(PAUSED_CLASS);
@@ -35,19 +47,21 @@ function Play(setTitleState: React.Dispatch<React.SetStateAction<string>>) {
 
 function App() {
   const [titleState, setTitleState] = useState(PAUSED_TITLE);
+  const [state, send] = useMachine(gifMachine);
+  console.log("State: ", state.value);
   return (
     <div className="App">
       <div id="center-div">
         <p id="title">{titleState}</p>
         <Gif />
         <button
-          onClick={() => Play(setTitleState)}
+          onClick={() => Play(setTitleState, send)}
           style={{ backgroundColor: "#73B2D9" }}
         >
           👅💧
         </button>
         <button
-          onClick={() => Pause(setTitleState)}
+          onClick={() => Pause(setTitleState, send)}
           style={{ backgroundColor: "#fdaaaa" }}
         >
           👅❌
