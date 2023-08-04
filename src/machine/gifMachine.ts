@@ -36,6 +36,7 @@ export const gifMachine = createMachine(
   {
     actions: {
       playAction: () => {
+        console.log("PLAY ACTION RUNNING!");
         const gifElement = document.getElementById(GIF_ID);
         if (gifElement) {
           gifElement.classList.remove(PAUSED_CLASS);
@@ -45,7 +46,7 @@ export const gifMachine = createMachine(
         }
       },
       pauseAction: () => {
-        console.log("Pause action!");
+        console.log("PAUSE ACTION RUNNING!");
         const gifElement = document.getElementById(GIF_ID);
         if (gifElement) {
           gifElement.classList.remove(PLAYING_CLASS);
